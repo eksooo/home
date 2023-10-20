@@ -46,16 +46,17 @@ body {
 .search button {
     font-size: 20px;
 }
-ul {
+nav ul {
     font-size: 20px;
     text-align: center;
     text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    background-color: rgba(255,255,255,0.6);
 }
-ul li {
+nav ul li {
     display: inline-block;
     margin: 10px;
 }
-ul a {
+nav ul a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
@@ -112,6 +113,64 @@ header {
 .right {
     margin-left: 50px;
 }
+footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+    background-color: rgb(219, 219, 219);   
+}
+/* Inquire */
+.inkantamail {
+    min-height: 100vh;
+    background: rgb(245, 245, 245);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+} 
+.mailmes span {
+    display: block;
+}
+.mailmes input, .mailmes button, .mailmes textarea {
+    margin: 5px;
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
+    resize: none;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    outline: blue;
+
+}
+.mailmes textarea {
+    height: 300px;
+}
+.infotwo {
+    margin-left: 1rem;
+}
+/* Aside List, About.html */
+.inkantaabout {
+    min-height: 100vh;
+    background: rgb(245, 245, 245);
+}
+.inkantaabout aside{
+    float: left;
+    text-align: left;
+    position: sticky;
+    top: 150px;
+    width: 300px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 1rem;
+}
+.inkantaabout article{
+    margin-left: 350px;
+    margin-top: 1rem;
+    background-color: rgba(0,0,0,0.1);
+    padding: 1rem;
+    border-radius: 20px;
+
+}
 /* Media Queries */
 @media (max-width:1024px) {
     .search input {
@@ -127,6 +186,18 @@ header {
     }
 }
 @media (max-width:768px) {
+    .infotwo {
+        margin-left: 0px;
+    }
+    .inkantamail {
+        min-height: 100vh;
+        background: rgb(245, 245, 245);
+        display:block;
+        text-align: center;
+    } 
+    footer p{
+        font-size: 20px;
+    }
     .checkbtn {
         display: block;
     }
@@ -153,6 +224,21 @@ header {
     }
 }
 @media (max-width:425px) {
+    .mailmes input, .mailmes button, .mailmes textarea {
+        margin: 5px;
+        width: 300px;
+        max-width: 300px;
+        min-width: 300px;
+    }
+    .mailmes textarea {
+        height: 200px;
+    }
+    footer p, footer h1{
+        font-size: 15px;
+    }
+    footer img {
+        width: 100px;
+    }
     .inkanta main {
         display: block;
     }
@@ -174,6 +260,9 @@ header {
     }
 }
 @media (max-width:320px) {
+    footer p, footer h1{
+        font-size: 10px;
+    }
     .search input {
         width: 40vw;
         font-size: 16px;
